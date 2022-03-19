@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 public final class DeleteHotbar implements CommandExecutor {
 
     @Override
+    // /puccia {target} inventory {cooldown}
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         if (!(sender instanceof Player)) {
             Bukkit.getLogger().info("sei un disabile di merda dio porco");
@@ -28,12 +29,14 @@ public final class DeleteHotbar implements CommandExecutor {
             return false;
         }
 
-        if (args[1].equals("hotbar")) {
+        if (args[1].equals("inventory")) {
+            // puccia.inv -> inv
             ArrayList<ItemStack> inv = new ArrayList<>();
             for (ItemStack item : puccia.getInventory()) {
                 inv.add(item);
             }
 
+            // clear inv
             for (int i = 0; i < 36; i++) {
                 puccia.getInventory().setItem(i, new ItemStack(Material.AIR));
             }
@@ -44,7 +47,6 @@ public final class DeleteHotbar implements CommandExecutor {
                 sender.sendMessage("DIO MAIALE");
             }
 
-            sender.sendMessage("dio maiale");
             for (int i = 0; i < 36; i++) {
                 puccia.getInventory().setItem(i, inv.get(i));
             }
