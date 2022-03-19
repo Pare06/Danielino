@@ -1,0 +1,10 @@
+name: DanielinoPuccino
+version: 1.0.4
+author: Brando Merdolini
+main: com.jacopo.danielino.Main
+
+commands:
+  puccia:
+    description: distrugge il puccia in modo epico
+    usage: /puccia {target} {action} {args}
+    permission: bukkit.command.give
