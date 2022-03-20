@@ -4,7 +4,27 @@ author: Brando Merdolini
 main: com.jacopo.danielino.Main
 
 commands:
-  puccia:
-    description: distrugge il puccia in modo epico
-    usage: /puccia {target} {action} {args}
+  #puccia:
+  #  description: distrugge il puccia in modo epico
+  #  usage: /puccia
+  #  permission: bukkit.command.give
+  pucciainv:
+    description: cancella l'inventario di {target} e lo fa tornare dopo {args} secondi
+    usage: /pucciainv {target} {arg}
+    permission: bukkit.command.give
+  pucciavoid:
+    description: fa cadere {target} nel void
+    usage: /pucciavoid {target}
+    permission: bukkit.command.give
+  pucciatop:
+    description: tippa {target} a y 256
+    usage: /pucciatop {target}
+    permission: bukkit.command.give
+  pucciaslow:
+    description: piazza cobweb addosso a {target}
+    usage: /pucciaslow {target}
+    permission: bukkit.command.give
+  pucciaspam:
+    description: spamma {messaggio} a {target}
+    usage: /pucciaspam {target} {messaggio}
     permission: bukkit.command.give
